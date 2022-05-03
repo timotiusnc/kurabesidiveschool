@@ -8,4 +8,5 @@ node_modules
 /build/
 /public/build
 /api/*
-/styles/app.css
+
+/app/styles/app.css
