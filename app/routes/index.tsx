@@ -1,3 +1,4 @@
+import { Link } from "@remix-run/react";
 import { Header } from "~/components/Header";
 import { ThemeSwitcher } from "~/components/ThemeSwitcher";
 
@@ -15,12 +16,12 @@ export default function Index() {
         </h1>
         <ThemeSwitcher />
         <div className="inline-flex rounded-md shadow">
-          <a
-            href="#"
+          <Link
+            to="team"
             className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700"
           >
             Get started
-          </a>
+          </Link>
         </div>
       </main>
     </>
