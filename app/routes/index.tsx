@@ -16,9 +16,9 @@ export default function Index() {
     <>
       <div className="polkadot h-full w-80 hidden md:block"></div>
       <Header />
-      <main className="relative">
-        <div className="py-20 px-5 text-center">
-          <h1 className="text-7xl font-extrabold tracking-tight">
+      <main>
+        <div className="py-14 md:py-16 px-5 text-center">
+          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
             <span className="block">Get Your</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#007CF0] to-[#00DFD8]">
               Scuba Dive Certification
@@ -34,14 +34,14 @@ export default function Index() {
           </Link>
         </div>
 
-        <div className="py-20">
-          <div className="slanted bg-[#06dbd0] py-20">
+        <div className="py-14 md:py-16">
+          <div className="slanted bg-[#06dbd0] py-14 md:py-16">
             <Features />
           </div>
         </div>
       </main>
 
-      <div className="py-20">
+      <div className="py-14 md:py-16">
         <Footer />
       </div>
     </>
