@@ -22,12 +22,27 @@ export const meta: MetaFunction = () => ({
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <Meta />
         <Links />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (
+                localStorage.theme === "dark" ||
+                (!("theme" in localStorage) &&
+                  window.matchMedia("(prefers-color-scheme: dark)").matches)
+              ) {
+                document.documentElement.classList.add("dark");
+              } else {
+                document.documentElement.classList.remove("dark");
+              }
+          `,
+          }}
+        />
       </head>
-      <body>
+      <body className="h-full">
         <Outlet />
         <ScrollRestoration />
         <Scripts />

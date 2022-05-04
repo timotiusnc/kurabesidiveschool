@@ -10,3 +10,4 @@ node_modules
 /api/*
 
 /app/styles/app.css
+.DS_STORE
