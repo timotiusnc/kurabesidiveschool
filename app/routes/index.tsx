@@ -1,5 +1,6 @@
 import type { LinksFunction } from "@remix-run/node";
 import { Link } from "@remix-run/react";
+import { Features } from "~/components/Features";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { ThemeSwitcher } from "~/components/ThemeSwitcher";
@@ -13,10 +14,11 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <>
+      <div className="polkadot h-full w-80 hidden md:block"></div>
       <Header />
-      <main className="text-center">
-        <div className="py-20">
-          <h1 className="text-6xl font-extrabold tracking-tight">
+      <main className="relative">
+        <div className="py-20 px-5 text-center">
+          <h1 className="text-7xl font-extrabold tracking-tight">
             <span className="block">Get Your</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#007CF0] to-[#00DFD8]">
               Scuba Dive Certification
@@ -33,28 +35,15 @@ export default function Index() {
         </div>
 
         <div className="py-20">
-          <div className="slanted bg-[#d80610] py-20">
-            green-500
-            <br />
-            green-501
-            <br />
-            green-502
-            <br />
-            green-503
-            <br />
-            green-504
-            <br />
-            green-505
-            <br />
-            green-506
-            <br />
+          <div className="slanted bg-[#06dbd0] py-20">
+            <Features />
           </div>
         </div>
-
-        <div className="py-20">no-color-500</div>
-        <div className="py-20">gray-500</div>
       </main>
-      <Footer />
+
+      <div className="py-20">
+        <Footer />
+      </div>
     </>
   );
 }
