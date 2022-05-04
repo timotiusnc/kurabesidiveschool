@@ -29,7 +29,7 @@ export const ThemeSwitcher = () => {
 
   if (theme === undefined) return null;
   return (
-    <div className="w-4">
+    <div className="text-black dark:text-white w-4">
       {theme === "light" ? (
         <MoonIcon onClick={toggleTheme} />
       ) : (

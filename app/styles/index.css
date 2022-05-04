@@ -1,0 +1,25 @@
+.slanted {
+  position: relative;
+}
+
+.slanted::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 150px;
+  top: -105px;
+  background: inherit;
+  clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+}
+
+.slanted::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 150px;
+  bottom: -105px;
+  background: inherit;
+  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 30%);
+}

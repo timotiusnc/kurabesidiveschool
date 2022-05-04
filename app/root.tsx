@@ -42,7 +42,7 @@ export default function App() {
           }}
         />
       </head>
-      <body className="h-full">
+      <body className="h-full dark:bg-slate-800">
         <Outlet />
         <ScrollRestoration />
         <Scripts />
