@@ -13,11 +13,11 @@ export const links: LinksFunction = () => {
 
 export default function Index() {
   return (
-    <>
+    <div>
       <div className="polkadot h-full w-80 hidden md:block"></div>
       <Header />
       <main>
-        <div className="py-14 md:py-16 px-5 text-center">
+        <div className="py-10 px-5 text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
             <span className="block">Get Your</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#007CF0] to-[#00DFD8]">
@@ -34,16 +34,14 @@ export default function Index() {
           </Link>
         </div>
 
-        <div className="py-14 md:py-16">
-          <div className="slanted bg-[#06dbd0] py-14 md:py-16">
-            <Features />
-          </div>
+        <div className="slantedx bg-[#06dbd0]" />
+        <div className="py-16 bg-[#06dbd0]">
+          <Features />
         </div>
+        <div className="slantedy bg-[#06dbd0]" />
       </main>
 
-      <div className="py-14 md:py-16">
-        <Footer />
-      </div>
-    </>
+      <Footer />
+    </div>
   );
 }

@@ -36,7 +36,7 @@ const features = [
 export function Features() {
   return (
     <div>
-      <div className="max-w-xs sm:max-w-sm lg:max-w-md px-4 lg:mx-auto mb-4">
+      <div className="max-w-xs sm:max-w-sm lg:max-w-md px-4 lg:mx-auto">
         <img src="images/kurabesi_wide.webp" alt="Kurabesi Dive School Logo" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,7 +47,7 @@ export function Features() {
           <p className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-black sm:text-4xl mx-auto">
             Learning made easy and fun!
           </p>
-          <p className="mt-4 max-w-2xl text-xl text-black opacity-75 lg:mx-auto">
+          <p className="mt-4 max-w-2xl text-xl text-black lg:mx-auto">
             Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
             voluptatum cupiditate veritatis in accusamus quisquam.
           </p>
@@ -68,7 +68,7 @@ export function Features() {
                     {feature.name}
                   </p>
                 </dt>
-                <dd className="mt-2 ml-16 text-base text-black opacity-75">
+                <dd className="mt-2 ml-16 text-base text-black">
                   {feature.description}
                 </dd>
               </div>

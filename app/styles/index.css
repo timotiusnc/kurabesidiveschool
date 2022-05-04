@@ -4,51 +4,31 @@
   right: 0;
   opacity: 0.7;
   background-image: radial-gradient(#007cf0 1px, transparent 1px),
-    radial-gradient(#007cf0 1px, white 1px);
+    radial-gradient(#007cf0 1px, transparent 1px);
   background-size: 34px 34px;
   background-position: 0 0, 17px 17px;
 }
 
-.slanted {
-  position: relative;
-}
-
-.slanted::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: inherit;
-  height: 100px;
-  top: -40px;
-  /* background: #06dbd0;
-  clip-path: polygon(0 0, 100% 70%, 100% 75%, 0 5%); */
-  clip-path: polygon(0 0, 100% 40%, 100% 100%, 0 100%);
+.slantedx {
+  height: 50px;
+  clip-path: polygon(0 0, 100% 50px, 100% 100%, 0 100%);
 }
 
 @media (min-width: 768px) {
-  .slanted::before {
-    height: 150px;
-    top: -105px;
-    clip-path: polygon(0 0, 100% 70%, 100% 100%, 0 100%);
+  .slantedx {
+    height: 100px;
+    clip-path: polygon(0 0, 100% 100px, 100% 100%, 0 100%);
   }
 }
 
-.slanted::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  background: inherit;
-  height: 100px;
-  bottom: -40px;
-  clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 60%);
+.slantedy {
+  height: 50px;
+  clip-path: polygon(0 0, 100% 0, 100% 50px, 0 0);
 }
 
 @media (min-width: 768px) {
-  .slanted::after {
-    height: 150px;
-    bottom: -105px;
-    clip-path: polygon(0 0%, 100% 0, 100% 100%, 0 30%);
+  .slantedy {
+    height: 100px;
+    clip-path: polygon(0 0, 100% 0, 100% 100px, 0 0);
   }
 }

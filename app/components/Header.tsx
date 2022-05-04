@@ -99,7 +99,7 @@ function classNames(...classes: any[]) {
 
 export function Header() {
   return (
-    <Popover className="relative dark:bg-slate-500">
+    <Popover className="sticky top-0 z-10 bg-white dark:bg-slate-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
@@ -113,12 +113,15 @@ export function Header() {
             </a>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
+            {/* mobile */}
             <Popover.Button className="bg-white rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:text-gray-500 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500">
               <span className="sr-only">Open menu</span>
               <MenuIcon className="h-6 w-6" aria-hidden="true" />
             </Popover.Button>
           </div>
+
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
+            {/* Desktop menu with dropdown */}
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -147,7 +150,7 @@ export function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
+                    <Popover.Panel className="absolute -ml-4 mt-3 transform px-2 w-screen max-w-md sm:px-0 lg:ml-0 lg:left-1/2 lg:-translate-x-1/2">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {solutions.map((item) => (
@@ -194,12 +197,15 @@ export function Header() {
               )}
             </Popover>
 
+            {/* Desktop main menu without dropdown */}
             <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
             >
               Pricing
             </a>
+
+            {/* Desktop main menu without dropdown */}
             <a
               href="#"
               className="text-base font-medium text-gray-500 hover:text-gray-900"
@@ -207,6 +213,7 @@ export function Header() {
               Docs
             </a>
 
+            {/* Desktop menu with dropdown */}
             <Popover className="relative">
               {({ open }) => (
                 <>
@@ -235,7 +242,7 @@ export function Header() {
                     leaveFrom="opacity-100 translate-y-0"
                     leaveTo="opacity-0 translate-y-1"
                   >
-                    <Popover.Panel className="absolute z-10 left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
+                    <Popover.Panel className="absolute left-1/2 transform -translate-x-1/2 mt-3 px-2 w-screen max-w-md sm:px-0">
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {resources.map((item) => (
@@ -298,6 +305,8 @@ export function Header() {
               )}
             </Popover>
           </Popover.Group>
+
+          {/* Desktop menu far right */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
             <a
               href="#"
@@ -315,6 +324,7 @@ export function Header() {
         </div>
       </div>
 
+      {/* Mobile menu modal popover */}
       <Transition
         as={Fragment}
         enter="duration-200 ease-out"
@@ -326,7 +336,7 @@ export function Header() {
       >
         <Popover.Panel
           focus
-          className="absolute z-10 top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
+          className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
