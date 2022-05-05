@@ -1,5 +1,4 @@
 import type { LinksFunction } from "@remix-run/node";
-import { Link } from "@remix-run/react";
 import { Features } from "~/components/Features";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
@@ -21,7 +20,7 @@ export default function Index() {
         <div className="py-10 px-5 text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
             <span className="block">Get Your</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-[#007CF0] to-[#00DFD8]">
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
               Scuba Dive Certification
             </span>
             <span className="block">with us!</span>

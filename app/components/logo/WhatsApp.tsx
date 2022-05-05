@@ -1,4 +1,4 @@
-// from https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg
+// from https://commons.wikimedia.org/wiki/File:WhatsApp.svg
 
 export const WhatsAppLogo = (props: any) => (
   <svg
