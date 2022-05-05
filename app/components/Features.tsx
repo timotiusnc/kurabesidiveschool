@@ -1,35 +1,35 @@
 /* This example requires Tailwind CSS v2.0+ */
 import {
-  AnnotationIcon,
-  GlobeAltIcon,
-  LightningBoltIcon,
-  ScaleIcon,
+  ClipboardCheckIcon,
+  EmojiHappyIcon,
+  ShieldCheckIcon,
+  UserGroupIcon,
 } from "@heroicons/react/outline";
 
 const features = [
   {
-    name: "Competitive exchange rates",
+    name: "Quality Courses",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: GlobeAltIcon,
+      "We ensure all training standards are met while still being practical.",
+    icon: ClipboardCheckIcon,
   },
   {
-    name: "No hidden fees",
+    name: "Friendly Learning Environment",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: ScaleIcon,
+      "No matter what your background is, we strive to accommodate your needs. We're always ready to help.",
+    icon: UserGroupIcon,
   },
   {
-    name: "Transfers are instant",
+    name: "Safety First",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: LightningBoltIcon,
+      "Safety is our priority. We put huge attention to detail so you will be able to dive in a safe manner.",
+    icon: ShieldCheckIcon,
   },
   {
-    name: "Mobile notifications",
+    name: "Fun!",
     description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.",
-    icon: AnnotationIcon,
+      "While teaching courses is our major focus, we also explore other destinations in Indonesia to appreciate the beauty of our ocean.",
+    icon: EmojiHappyIcon,
   },
 ];
 
@@ -48,8 +48,8 @@ export function Features() {
             Learning made easy and fun!
           </p>
           <p className="mt-4 max-w-2xl text-xl text-black lg:mx-auto">
-            Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam
-            voluptatum cupiditate veritatis in accusamus quisquam.
+            Our mission at Kurabesi Dive School is to provide quality courses
+            and a friendly learning environment
           </p>
         </div>
 

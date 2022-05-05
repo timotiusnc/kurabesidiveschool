@@ -26,16 +26,7 @@ export default function Index() {
             <span className="block">with us!</span>
           </h1>
 
-          <a
-            href="https://wa.me/628115415335?text=Halo Kurabesi, saya dapat kontak ini dari https://kurabesidiveschool.com. Saya mau tahu lebih lanjut mengenai sertifikasi scuba diving."
-            target="_blank"
-            rel="noreferrer"
-          >
-            <div className="mt-8 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-cyan-400 hover:bg-cyan-500">
-              <WhatsAppLogo className="w-6 mr-2" />
-              <span>Contact Us (WhatsApp)</span>
-            </div>
-          </a>
+          <ContactUs />
         </div>
 
         <div className="slantedx bg-cyan-400" />
@@ -43,9 +34,36 @@ export default function Index() {
           <Features />
         </div>
         <div className="slantedy bg-cyan-400" />
+
+        <div className="max-w-7xl mx-auto pt-10 pb-20 flex flex-col sm:flex-row items-center justify-evenly">
+          <div>
+            <h2 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
+              Ready to dive?
+            </h2>
+            <h2 className="text-4xl font-extrabold tracking-tight">
+              Contact Us!
+            </h2>
+          </div>
+          <ContactUs />
+        </div>
       </main>
 
       <Footer />
     </div>
   );
 }
+
+const ContactUs = () => {
+  return (
+    <a
+      href="https://wa.me/628115415335?text=Halo Kurabesi, saya dapat kontak ini dari https://kurabesidiveschool.com. Saya mau tahu lebih lanjut mengenai sertifikasi scuba diving."
+      target="_blank"
+      rel="noreferrer"
+    >
+      <div className="mt-8 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-cyan-400 hover:bg-cyan-500">
+        <WhatsAppLogo className="w-6 mr-2" />
+        <span>Contact Us (WhatsApp)</span>
+      </div>
+    </a>
+  );
+};

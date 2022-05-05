@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="flex p-10 flex-col gap-8 md:flex-row">
+    <footer className="flex p-10 flex-col gap-8 md:flex-row bg-gray-300">
       <div className="flex-1 flex gap-4 flex-col items-center md:items-end">
         <div className="w-64">
           <img alt="official partner SSI" src="images/blueocean.png" />
@@ -26,7 +26,10 @@ export const Footer = () => {
           <WA phone="628115415335" /> | <WA phone="62818942942" />
         </div>
         <div>
-          <Site site="https://www.divessi.com/en/divecenter/741174" />
+          <Site
+            label="Kurabesi Dive School @ SSI"
+            address="https://www.divessi.com/en/divecenter/741174"
+          />
         </div>
         <div className="text-xs mt-8">
           © {new Date().getFullYear()} Kurabesi Dive School. All rights
@@ -63,10 +66,10 @@ const WA = ({ phone }: { phone: string }) => {
   );
 };
 
-const Site = ({ site }: { site: string }) => {
+const Site = ({ label, address }: { label: string; address: string }) => {
   return (
-    <a className="underline" href={site} target="_blank" rel="noreferrer">
-      {site}
+    <a className="underline" href={address} target="_blank" rel="noreferrer">
+      {label}
     </a>
   );
 };
