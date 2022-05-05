@@ -36,7 +36,7 @@ export default function Index() {
         </div>
 
         <div className="slantedx bg-[#06dbd0]" />
-        <div className="py-16 bg-[#06dbd0]">
+        <div className="py-10 bg-[#06dbd0]">
           <Features />
         </div>
         <div className="slantedy bg-[#06dbd0]" />

@@ -15,6 +15,7 @@ import {
   XIcon,
 } from "@heroicons/react/outline";
 import { ChevronDownIcon } from "@heroicons/react/solid";
+import { Link } from "@remix-run/react";
 
 const solutions = [
   {
@@ -104,14 +105,14 @@ export function Header() {
         <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
             {/* mobile & desktop logo */}
-            <a href="#">
+            <Link to="/">
               <span className="sr-only">Workflow</span>
               <img
                 className="h-10 sm:h-12 w-auto"
                 src="images/kurabesi_wide.webp"
                 alt=""
               />
-            </a>
+            </Link>
           </div>
           <div className="-mr-2 -my-2 md:hidden">
             {/* mobile */}
