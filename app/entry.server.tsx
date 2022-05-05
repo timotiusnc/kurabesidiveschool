@@ -17,7 +17,7 @@ export default function handleRequest(
   responseHeaders.set("Content-Security-Policy", "upgrade-insecure-requests");
   responseHeaders.set("X-Frame-Options", "deny");
   responseHeaders.set("X-Content-Type-Options", "nosniff");
-  responseHeaders.set("Referer-Policy", "same-origin");
+  responseHeaders.set("Referrer-Policy", "same-origin");
   responseHeaders.set(
     "Permissions-Policy",
     "accelerometer=(), camera=(), gyroscope=(), magnetometer=(), microphone=(), payment=(), usb=(), interest-cohort=()"
