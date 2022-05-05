@@ -27,7 +27,7 @@ export function CatchBoundary() {
         <div className="w-3/4 sm:w-1/2 mx-auto">
           <img src="images/kurabesi_wide.webp" alt="Kurabesi Dive School" />
         </div>
-        <h1 className="text-3xl text-center mt-4 font-extrabold tracking-tight">
+        <h1 className="text-2xl sm:text-3xl text-center mt-4 font-extrabold tracking-tight">
           40.4 meters — Too Deep
         </h1>
         <p className="italic text-center font-bold">

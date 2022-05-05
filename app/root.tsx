@@ -19,7 +19,7 @@ export const meta: MetaFunction = () => {
     "Get Your SCUBA Dive Certification With Us — Kurabesi Dive School";
   const description =
     "Thinking to get yourself SCUBA Dive certified in a safe and joyful way? Kurabesi Dive School offers various SCUBA dive programs to facilitate you to grow in your diving path. Find out our team, courses, programs, and diving trips on our website.";
-  const image = "https://kurabesidiveschool.vercel.app/images/meta.jpg";
+  const image = "https://kurabesidiveschool.vercel.app/images/social.jpg";
   return {
     charset: "utf-8",
     viewport: "width=device-width,initial-scale=1",
