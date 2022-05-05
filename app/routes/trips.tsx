@@ -83,13 +83,9 @@ const Trips = () => {
                   {trip.name}
                 </h2>
                 {trip.desc
-                  .split(".") // Separate sentences into paragraphs
-                  .filter((sentence) => sentence.length > 0)
+                  .split(/\n/) // Separate sentences into paragraphs
                   .map((sentence, idx) => (
-                    <p key={idx}>
-                      {sentence}
-                      {sentence.at(sentence.length - 1) === "!" ? "" : "."}
-                    </p>
+                    <p key={idx}>{sentence}</p>
                   ))}
               </div>
             </section>
@@ -107,37 +103,65 @@ const trips = [
     name: "Alor",
     province: "NTT",
     imgUrl: "/images/trips/alor.webp",
-    desc: "Alor is one beautiful spot inside the “Sunda-Banda” seascape, one of the prioritized seascapes in Indonesia due to its mega biodiversity of marine life. At a large scale, this seascape is neighbor to Sulu-Sulawesi & Bird’s Head Seascape. As part of Indonesia’s Ring of Fire and shaped by thousands of years of volcanic history, Alor archipelago offers various underwater settings such as an outstanding wall, rockslides, valleys & seamounts, pinnacles, and some reef slopes. Those unique contours are covered with beautiful and intact coral reef ecosystems, as well as different schooling fish and big pelagic as their resident. Hoping to see them underwater? Let’s try our luck!",
+    desc: `Alor is one beautiful spot inside the “Sunda-Banda” seascape, one of the prioritized seascapes in Indonesia due to its mega biodiversity of marine life.
+    At a large scale, this seascape is neighbor to Sulu-Sulawesi & Bird’s Head Seascape.
+    As part of Indonesia’s Ring of Fire and shaped by thousands of years of volcanic history, Alor archipelago offers various underwater settings such as an outstanding wall, rockslides, valleys & seamounts, pinnacles, and some reef slopes.
+    Those unique contours are covered with beautiful and intact coral reef ecosystems, as well as different schooling fish and big pelagic as their resident.
+    Hoping to see them underwater? Let’s try our luck!`,
   },
   {
     name: "Komodo",
     province: "NTT",
     imgUrl: "/images/trips/komodo.webp",
-    desc: "This Park was originally designated to preserve the Komodo dragon and its natural habitat. However, due to its location at the south border of the coral triangle, the surrounding marine ecosystem was also magnificent. No wonder if Komodo is always listed as one of the best diving destinations in the world, a must-visit diving site for all divers. Drifting among numerous fish schooling of all sizes, sharks and the majestic manta rays are always on the menu for this area. The seabed is also a house for small and rare sea creatures that intrigues the world-class macro photographer to spend hours underwater. The trip to Komodo is always a beautiful combo of memorable underwater experiences and island trekking to learn more about the dragon.",
+    desc: `This Park was originally designated to preserve the Komodo dragon and its natural habitat.
+    However, due to its location at the south border of the coral triangle, the surrounding marine ecosystem was also magnificent.
+    No wonder if Komodo is always listed as one of the best diving destinations in the world, a must-visit diving site for all divers.
+    Drifting among numerous fish schooling of all sizes, sharks and the majestic manta rays are always on the menu for this area.
+    The seabed is also a house for small and rare sea creatures that intrigues the world-class macro photographer to spend hours underwater.
+    The trip to Komodo is always a beautiful combo of memorable underwater experiences and island trekking to learn more about the dragon.`,
   },
   {
     name: "Tulamben & Amed",
     province: "Bali",
     imgUrl: "/images/trips/tulamben.webp",
-    desc: "Bali is always loveable, where diving is doable all around the island. We regularly visit Tulamben, located on the North East coast of Bali that offers some great clear water diving opportunities. USS Liberty shipwreck is the most famed site for diving here. However, Tulamben also offers beautiful sites that are popular for their macro and wide photography.Going a bit further to the east, Amed Bay is a house to the beautiful coral reef ecosystem. A small Japanese Shipwreck is also a popular diving destination here in Amed. We believe that you would be blown away by the natural beauty of these places.",
+    desc: `Bali is always loveable, where diving is doable all around the island.
+    We regularly visit Tulamben, located on the North East coast of Bali that offers some great clear water diving opportunities.
+    USS Liberty shipwreck is the most famed site for diving here.
+    However, Tulamben also offers beautiful sites that are popular for their macro and wide photography.
+    Going a bit further to the east, Amed Bay is a house to the beautiful coral reef ecosystem.
+    A small Japanese Shipwreck is also a popular diving destination here in Amed.
+    We believe that you would be blown away by the natural beauty of these places.`,
   },
   {
     name: "Raja Ampat",
     province: "West Papua",
     imgUrl: "/images/trips/rajaampat.webp",
-    desc: "Located in the heart of the Coral Triangle, Raja Ampat holds the prize for being the place with the richest marine biodiversity in the world! This regency had attracted the world’s attention for conservation and blue economy. Raja Ampat demonstrates where preserved nature can provide ecosystem services to humans, reciprocally. Our trips are designed to explore both the Central part of Raja Ampat (known also as Dampier Strait) and Southers part of it (known also as Misool). These areas are home to a beautiful collection of diving sites, and marine biota from a tiny pygmy seahorse to majestic megafauna such as manta rays. We believe that you would be blown away by the natural beauty of this place.",
+    desc: `Located in the heart of the Coral Triangle, Raja Ampat holds the prize for being the place with the richest marine biodiversity in the world!
+    This regency had attracted the world’s attention for conservation and blue economy.
+    Raja Ampat demonstrates where preserved nature can provide ecosystem services to humans, reciprocally.
+    Our trips are designed to explore both the Central part of Raja Ampat (known also as Dampier Strait) and Southers part of it (known also as Misool).
+    These areas are home to a beautiful collection of diving sites, and marine biota from a tiny pygmy seahorse to majestic megafauna such as manta rays.
+    We believe that you would be blown away by the natural beauty of this place.`,
   },
   {
     name: "Banda Neira",
     province: "Maluku",
     imgUrl: "/images/trips/banda.webp",
-    desc: "Located in the heart of the Coral Triangle, Raja Ampat holds the prize for being the place with the richest marine biodiversity in the world! This regency had attracted the world’s attention for conservation and blue economy. Raja Ampat demonstrates where preserved nature can provide ecosystem services to humans, reciprocally. Our trips are designed to explore both the Central part of Raja Ampat (known also as Dampier Strait) and Southers part of it (known also as Misool). These areas are home to a beautiful collection of diving sites, and marine biota from a tiny pygmy seahorse to majestic megafauna such as manta rays. We believe that you would be blown away by the natural beauty of this place.",
+    desc: `Located in the heart of the Coral Triangle, Raja Ampat holds the prize for being the place with the richest marine biodiversity in the world!
+    This regency had attracted the world’s attention for conservation and blue economy.
+    Raja Ampat demonstrates where preserved nature can provide ecosystem services to humans, reciprocally.
+    Our trips are designed to explore both the Central part of Raja Ampat (known also as Dampier Strait) and Southers part of it (known also as Misool).
+    These areas are home to a beautiful collection of diving sites, and marine biota from a tiny pygmy seahorse to majestic megafauna such as manta rays.
+    We believe that you would be blown away by the natural beauty of this place.`,
   },
   {
     name: "Seribu Island",
     province: "DKI Jakarta",
     imgUrl: "/images/trips/seribu.webp",
-    desc: "Well, its on our backyard, only 1.5 hrs by boat and you will arrive in this island setting atmosphere. Seribu NP is our regular destination for facilitating the diving courses we provide and for going diving with our friends during the weekend. No wonder this marine park is a birth place for many Jakarta divers. In certain months, the visibility of these waters are also excellent, which give you opportunities to be grateful for these reefs.",
+    desc: `Well, its on our backyard, only 1.5 hrs by boat and you will arrive in this island setting atmosphere.
+    Seribu NP is our regular destination for facilitating the diving courses we provide and for going diving with our friends during the weekend.
+    No wonder this marine park is a birth place for many Jakarta divers.
+    In certain months, the visibility of these waters are also excellent, which give you opportunities to be grateful for these reefs.`,
   },
 ];
 
