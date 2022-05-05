@@ -14,20 +14,38 @@ export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: styles }];
 };
 
-export const meta: MetaFunction = () => ({
-  charset: "utf-8",
-  title: "New Remix App",
-  viewport: "width=device-width,initial-scale=1",
-});
+export const meta: MetaFunction = () => {
+  const title =
+    "Get Your SCUBA Dive Certification With Us — Kurabesi Dive School";
+  const description =
+    "Thinking to get yourself SCUBA Dive certified in a safe and joyful way? Kurabesi Dive School offers various SCUBA dive programs to facilitate you to grow in your diving path. Find out our team, courses, programs, and diving trips on our website.";
+  const image = "https://kurabesidiveschool.vercel.app/images/meta.jpg";
+  return {
+    charset: "utf-8",
+    viewport: "width=device-width,initial-scale=1",
+    title,
+    description,
+    keywords: "SCUBA,SSI,dive,diving,kurabesi",
+    "og:url": "https://kurabesidiveschool.com/",
+    "og:title": title,
+    "og:description": description,
+    "og:image": image,
+    "twitter:card": "summary_large_image",
+    "twitter:title": title,
+    "twitter:description": description,
+    "twitter:image": image,
+  };
+};
 
 export default function App() {
   return (
-    <html lang="en">
+    <html lang="en" className="h-full">
       <head>
         <Meta />
         <Links />
       </head>
-      <body>
+      <body className="h-full">
+        {/* h-full in html and body is for 404 page so we can set 100% height (because 404 page is not high enough) */}
         <Outlet />
         <ScrollRestoration />
         <Scripts />

@@ -21,7 +21,7 @@ export default function Index() {
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
             <span className="block">Get Your</span>
             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
-              Scuba Dive Certification
+              SCUBA Dive Certification
             </span>
             <span className="block">with us!</span>
           </h1>

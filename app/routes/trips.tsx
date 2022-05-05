@@ -1,5 +1,16 @@
+import type { MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
+
+export const meta: MetaFunction = () => {
+  const title = "Dive Trips — Kurabesi Dive School";
+  const description =
+    "Discover our dive trips across Indonesia. Explore the beauty of our ocean with Kurabesi Dive School.";
+  return {
+    title,
+    description,
+  };
+};
 
 const Trips = () => {
   return (

@@ -1,7 +1,17 @@
+import type { MetaFunction } from "@remix-run/node";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { InstagramLogo } from "~/components/logo/Instagram";
 import { SSILogo } from "~/components/logo/SSI";
+
+export const meta: MetaFunction = () => {
+  const title = "Meet The Team — Kurabesi Dive School";
+  const description = "Discover the awesome team behind Kurabesi Dive School.";
+  return {
+    title,
+    description,
+  };
+};
 
 const Team = () => {
   return (
