@@ -1,10 +1,10 @@
 .polkadot {
   position: absolute;
   z-index: 0;
-  right: 0;
+  left: 0;
   opacity: 0.7;
-  background-image: radial-gradient(#007cf0 1px, transparent 1px),
-    radial-gradient(#007cf0 1px, transparent 1px);
+  background-image: radial-gradient(#007cf000 1px, transparent 1px),
+    radial-gradient(#007cf077 1px, transparent 1px);
   background-size: 34px 34px;
   background-position: 0 0, 17px 17px;
 }

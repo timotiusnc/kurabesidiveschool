@@ -101,13 +101,14 @@ export function Header() {
   return (
     <Popover className="sticky top-0 z-10 bg-white dark:bg-slate-500">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex justify-between items-center py-6 md:justify-start md:space-x-10">
+        <div className="flex justify-between items-center py-3 md:justify-start md:space-x-10">
           <div className="flex justify-start lg:w-0 lg:flex-1">
+            {/* mobile & desktop logo */}
             <a href="#">
               <span className="sr-only">Workflow</span>
               <img
-                className="h-8 w-auto sm:h-16"
-                src="images/kurabesi.png"
+                className="h-10 sm:h-12 w-auto"
+                src="images/kurabesi_wide.webp"
                 alt=""
               />
             </a>
@@ -341,10 +342,11 @@ export function Header() {
           <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
+                {/* mobile popover logo */}
                 <div>
                   <img
-                    className="h-8 w-auto"
-                    src="images/kurabesi.png"
+                    className="h-10 w-auto"
+                    src="images/kurabesi_wide.webp"
                     alt="Workflow"
                   />
                 </div>

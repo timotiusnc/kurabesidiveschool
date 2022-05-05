@@ -14,9 +14,10 @@ export const links: LinksFunction = () => {
 export default function Index() {
   return (
     <div>
-      <div className="polkadot h-full w-80 hidden md:block"></div>
+      <div className="polkadot h-full w-full hidden md:block"></div>
       <Header />
-      <main>
+      {/* as "polkadot" is absolute positioned, "main" needs to be relative so "polkadot" will hide behind "main" */}
+      <main className="relative">
         <div className="py-10 px-5 text-center">
           <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight">
             <span className="block">Get Your</span>

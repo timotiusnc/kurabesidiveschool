@@ -36,7 +36,7 @@ const features = [
 export function Features() {
   return (
     <div>
-      <div className="max-w-xs sm:max-w-sm lg:max-w-md px-4 lg:mx-auto">
+      <div className="max-w-xs sm:max-w-sm lg:max-w-md px-4 mb-8 lg:mx-auto">
         <img src="images/kurabesi_wide.webp" alt="Kurabesi Dive School Logo" />
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
