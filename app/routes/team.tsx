@@ -34,7 +34,7 @@ const Team = () => {
                   />
                 </div>
                 <div className="pt-4 pb-8 flex flex-col items-center">
-                  <div className="text-2xl font-bold mb-2">{team.name}</div>
+                  <div className="text-2xl font-bold mb-1">{team.name}</div>
                   <div
                     className="text-base text-indigo-600 mb-1 text-center sm:line-clamp-1"
                     title={team.title}
@@ -79,10 +79,24 @@ const Team = () => {
                 </div>
               </div>
               <div className="flex-1 prose max-w-lg">
+                {/* invisible to make the desc below align with the photo */}
+                <h2 className="text-3xl mb-3 font-bold hidden sm:block sm:invisible">
+                  {team.name}
+                </h2>
                 <p className="lead">
+                  {/* Render first sentence with "lead" class */}
                   {team.desc.substring(0, team.desc.indexOf(".") + 1)}
                 </p>
-                <p>{team.desc.substring(team.desc.indexOf(".") + 1)}</p>
+                {team.desc // Separate sentences into paragraphs
+                  .substring(team.desc.indexOf(".") + 1)
+                  .split(".")
+                  .filter((sentence) => sentence.length > 0)
+                  .map((sentence, idx) => (
+                    <p key={idx}>
+                      {sentence}
+                      {sentence.at(sentence.length - 1) === "!" ? "" : "."}
+                    </p>
+                  ))}
               </div>
             </section>
           ))}
@@ -142,7 +156,7 @@ const teams = [
     title: "SSI Assistant Instructor",
     proid: "69098",
     ig_handle: "emildr",
-    desc: "Emil has been diving since 2012 and spent his earlier diving life as a scientific diver. He's been working in the scuba diving industry since 2015, teaching and spreading his love of scuba diving and the sea to hundreds of students. Nowadays, Emil's day-to-day life is a sandwich between working in a conservation organization and as a dive professional in Kurabesi Dive School. In Kurabesi Dive School, Emil assists and teaches entry-level scuba diver candidates, making sure everyone is having positive experiences, having fun, and most importantly becoming a responsible diver. In the team, Emil is our data guy that will support the school's business improvement. ",
+    desc: "Emil has been diving since 2012 and spent his earlier diving life as a scientific diver. He's been working in the scuba diving industry since 2015, teaching and spreading his love of scuba diving and the sea to hundreds of students. Nowadays, Emil's day-to-day life is a sandwich between working in a conservation organization and as a dive professional in Kurabesi Dive School. In Kurabesi Dive School, Emil assists and teaches entry-level scuba diver candidates, making sure everyone is having positive experiences, having fun, and most importantly becoming a responsible diver. In the team, Emil is our data guy that will support the school's business improvement.",
   },
   {
     name: "Jonata Witabora",
@@ -150,7 +164,7 @@ const teams = [
     title: "SSI Dive Master",
     proid: "95177",
     ig_handle: "witabora",
-    desc: "Jonat is a long-time diver. Started his dive in 2011, he enjoyed his diving process and had tried different interests in diving, and photography is one of those. With his calm and easy-going personality, in 2020, he joined the team as a certified assistant for various courses, in the pool and open water sessions. With his extensive experience and calm personality, diving would feel super safe. Teaching and drawing are his core expertise since he is an amazing graphic designer that gives lectures at one of the most prominent universities in Jakarta for graphic design. He also designs (hand draws) all of our diving trip t-shirts. In our team, he is our design master! Go diving with us to get his signature drawing on a t-shirt! ",
+    desc: "Jonat is a long-time diver. Started his dive in 2011, he enjoyed his diving process and had tried different interests in diving, and photography is one of those. With his calm and easy-going personality, in 2020, he joined the team as a certified assistant for various courses, in the pool and open water sessions. With his extensive experience and calm personality, diving would feel super safe. Teaching and drawing are his core expertise since he is an amazing graphic designer that gives lectures at one of the most prominent universities in Jakarta for graphic design. He also designs (hand draws) all of our diving trip t-shirts. In our team, he is our design master! Go diving with us to get his signature drawing on a t-shirt!",
   },
   {
     name: "Hizkia Christie",
@@ -158,7 +172,7 @@ const teams = [
     title: "SSI Dive Master",
     proid: "101467",
     ig_handle: "hizkiachristie",
-    desc: "Hizkia took his first diving training in 2017, has been everywhere and is officially a Divemaster now. He is a young professional cinematographer both above and underwater. His stories and posts on his social media are mind-blowing! Recording and editing videos are his love and life that he brought into the underwater world. He loves to share some tips and tricks too! In our team, he is our social media guru that is managing our platforms. He also spent some years as an aquarist in a fancy aquarium in Jakarta, which really boosted his knowledge about marine life, especially when it comes to ornamental fish. Though his buoyancy and diving skill are considered examplary, he always listens and learns from others to always improve himself in diving.",
+    desc: "Hizkia took his first diving training in 2017, has been everywhere and is officially a Divemaster now. He is a young professional cinematographer both above and underwater. His stories and posts on his social media are mind-blowing! Recording and editing videos are his love and life that he brought into the underwater world. He loves to share some tips and tricks too! In our team, he is our social media guru that is managing our platforms. He also spent some years as an aquarist in a fancy aquarium in Jakarta, which really boosted his knowledge about marine life, especially when it comes to ornamental fish. Though his buoyancy and diving skill are considered exemplary, he always listens and learns from others to always improve himself in diving.",
   },
   {
     name: "Frieska Pamariadinata",

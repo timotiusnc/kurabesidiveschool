@@ -13,6 +13,7 @@ import {
 import { Link } from "@remix-run/react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
 
+const moreCutOff = 3; // number of items to show before "more"
 const routes = [
   {
     name: "Team",
@@ -79,7 +80,7 @@ export function Header() {
           <Popover.Group as="nav" className="hidden md:flex space-x-10">
             {/* Desktop main menu without dropdown */}
             {routes
-              .filter((item, idx) => idx < 3)
+              .filter((item, idx) => idx < moreCutOff)
               .map((route) => (
                 <Link
                   key={route.href}
@@ -123,7 +124,7 @@ export function Header() {
                       <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
                         <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
                           {routes
-                            .filter((item, idx) => idx >= 3)
+                            .filter((item, idx) => idx >= moreCutOff)
                             .map((item) => (
                               <a
                                 key={item.name}
