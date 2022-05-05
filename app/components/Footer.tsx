@@ -18,7 +18,9 @@ export const Footer = () => {
           />
         </div>
       </div>
+
       <div className="flex-initial border-r border-black hidden md:block"></div>
+
       <div className="flex-1 flex flex-col gap-4 font-inters text-sm text-center md:text-left">
         <h1 className="text-2xl md:text-3xl uppercase">Kurabesi Dive School</h1>
         <div>
