@@ -9,19 +9,19 @@ const Trips = () => {
 
       {/* as "polkadot" is absolute positioned, "main" needs to be relative so "polkadot" will hide behind "main" */}
       <main className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="text-center pb-12">
-            <h2 className="text-base font-bold text-indigo-600">
+            <h2 className="text-base font-bold text-indigo-600 uppercase">
               Kurabesi Dive School
             </h2>
-            <h1 className="font-bold text-4xl md:text-5xl font-heading">
+            <h1 className="font-bold text-4xl md:text-5xl">
               Explore The Beauty of Our Ocean
             </h1>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {trips.map((trip) => (
               <div
-                key={trip.proid}
+                key={trip.name}
                 className="w-full overflow-hidden flex flex-col justify-center"
               >
                 <div className="drop-shadow-md mx-auto">
@@ -31,7 +31,7 @@ const Trips = () => {
                     alt={trip.name}
                   />
                 </div>
-                <div className="pt-4 pb-8 flex flex-col items-center">
+                <div className="pt-4 flex flex-col items-center">
                   <div className="text-2xl font-bold mb-1">{trip.name}</div>
                   <div
                     className="text-base text-indigo-600 mb-1 text-center sm:line-clamp-1"

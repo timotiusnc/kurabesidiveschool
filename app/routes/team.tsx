@@ -11,16 +11,14 @@ const Team = () => {
 
       {/* as "polkadot" is absolute positioned, "main" needs to be relative so "polkadot" will hide behind "main" */}
       <main className="relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 pt-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
           <div className="text-center pb-12">
-            <h2 className="text-base font-bold text-indigo-600">
+            <h2 className="text-base font-bold text-indigo-600 uppercase">
               Kurabesi Dive School
             </h2>
-            <h1 className="font-bold text-4xl md:text-5xl font-heading">
-              Meet The Team
-            </h1>
+            <h1 className="font-bold text-4xl md:text-5xl">Meet The Team</h1>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {teams.map((team) => (
               <div
                 key={team.proid}
@@ -33,7 +31,7 @@ const Team = () => {
                     alt={team.name}
                   />
                 </div>
-                <div className="pt-4 pb-8 flex flex-col items-center">
+                <div className="pt-4 flex flex-col items-center">
                   <div className="text-2xl font-bold mb-1">{team.name}</div>
                   <div
                     className="text-base text-indigo-600 mb-1 text-center sm:line-clamp-1"
@@ -89,13 +87,9 @@ const Team = () => {
                 </p>
                 {team.desc // Separate sentences into paragraphs
                   .substring(team.desc.indexOf(".") + 1)
-                  .split(".")
-                  .filter((sentence) => sentence.length > 0)
+                  .split(/\n/)
                   .map((sentence, idx) => (
-                    <p key={idx}>
-                      {sentence}
-                      {sentence.at(sentence.length - 1) === "!" ? "" : "."}
-                    </p>
+                    <p key={idx}>{sentence}</p>
                   ))}
               </div>
             </section>
@@ -140,7 +134,11 @@ const teams = [
     title: "SSI Master Instructor | Assistant Instructor Trainer",
     proid: "54342",
     ig_handle: "raymond_jakub",
-    desc: "Raymond started his diving in 2002 and started his scuba diving teaching in 2007. He has extensive experience in facilitating hundreds of diving students getting their various programs. In Kurabesi Dive School, he acts as the Quality Management System Manager, ensuring the teaching and service quality to our customers are always at a gold standard. Within the team, he focuses on certifying divers who are planning to become qualified SSI's dive professionals, as well as teaching other specialties such as sidemount, emergency, and science of diving. Trained as a marine biologist, he is a professional marine & fisheries, conservation practitioner.",
+    desc: `Raymond started his diving in 2002 and started his scuba diving teaching in 2007.
+    He has extensive experience in facilitating hundreds of diving students getting their various programs.
+    In Kurabesi Dive School, he acts as the Quality Management System Manager, ensuring the teaching and service quality to our customers are always at a gold standard.
+    Within the team, he focuses on certifying divers who are planning to become qualified SSI's dive professionals, as well as teaching other specialties such as sidemount, emergency, and science of diving.
+    Trained as a marine biologist, he is a professional marine & fisheries, conservation practitioner.`,
   },
   {
     name: "Mohamad Zaki",
@@ -148,15 +146,25 @@ const teams = [
     title: "SSI Assistant Instructor",
     proid: "86394",
     ig_handle: "mhmdzaki",
-    desc: "Zaki started his diving in 2016 in Jakarta. His passion for going to different destinations, diving with his friends, and sharing his hospitality with others brought him to the dive professional level in 2019. Going diving with him is an assurance of joy thanks to his cheerful and friendly personality. He holds a high quality of service in diving, beyond your imagination. In the house, Zaki is the guy that manages our course and trip schedule. While doing his professional diving time, he doesn't stop to learn and build his diving knowledge and skill from time to time. For him, diving is a way of balancing his busy time as a media professional on weekdays.",
+    desc: `Zaki started his diving in 2016 in Jakarta.
+    His passion for going to different destinations, diving with his friends, and sharing his hospitality with others brought him to the dive professional level in 2019.
+    Going diving with him is an assurance of joy thanks to his cheerful and friendly personality.
+    He holds a high quality of service in diving, beyond your imagination.
+    In the house, Zaki is the guy that manages our course and trip schedule.
+    While doing his professional diving time, he doesn't stop to learn and build his diving knowledge and skill from time to time.
+    For him, diving is a way of balancing his busy time as a media professional on weekdays.`,
   },
   {
     name: "Emilio De La Rosa",
-    imgUrl: "/images/teams/emilo.webp",
+    imgUrl: "/images/teams/emilio.webp",
     title: "SSI Assistant Instructor",
     proid: "69098",
     ig_handle: "emildr",
-    desc: "Emil has been diving since 2012 and spent his earlier diving life as a scientific diver. He's been working in the scuba diving industry since 2015, teaching and spreading his love of scuba diving and the sea to hundreds of students. Nowadays, Emil's day-to-day life is a sandwich between working in a conservation organization and as a dive professional in Kurabesi Dive School. In Kurabesi Dive School, Emil assists and teaches entry-level scuba diver candidates, making sure everyone is having positive experiences, having fun, and most importantly becoming a responsible diver. In the team, Emil is our data guy that will support the school's business improvement.",
+    desc: `Emil has been diving since 2012 and spent his earlier diving life as a scientific diver.
+    He's been working in the scuba diving industry since 2015, teaching and spreading his love of scuba diving and the sea to hundreds of students.
+    Nowadays, Emil's day-to-day life is a sandwich between working in a conservation organization and as a dive professional in Kurabesi Dive School.
+    In Kurabesi Dive School, Emil assists and teaches entry-level scuba diver candidates, making sure everyone is having positive experiences, having fun, and most importantly becoming a responsible diver.
+    In the team, Emil is our data guy that will support the school's business improvement.`,
   },
   {
     name: "Jonata Witabora",
@@ -164,7 +172,12 @@ const teams = [
     title: "SSI Dive Master",
     proid: "95177",
     ig_handle: "witabora",
-    desc: "Jonat is a long-time diver. Started his dive in 2011, he enjoyed his diving process and had tried different interests in diving, and photography is one of those. With his calm and easy-going personality, in 2020, he joined the team as a certified assistant for various courses, in the pool and open water sessions. With his extensive experience and calm personality, diving would feel super safe. Teaching and drawing are his core expertise since he is an amazing graphic designer that gives lectures at one of the most prominent universities in Jakarta for graphic design. He also designs (hand draws) all of our diving trip t-shirts. In our team, he is our design master! Go diving with us to get his signature drawing on a t-shirt!",
+    desc: `Jonat is a long-time diver. Started his dive in 2011, he enjoyed his diving process and had tried different interests in diving, and photography is one of those.
+    With his calm and easy-going personality, in 2020, he joined the team as a certified assistant for various courses, in the pool and open water sessions.
+    With his extensive experience and calm personality, diving would feel super safe.
+    Teaching and drawing are his core expertise since he is an amazing graphic designer that gives lectures at one of the most prominent universities in Jakarta for graphic design.
+    He also designs (hand draws) all of our diving trip t-shirts.
+    In our team, he is our design master! Go diving with us to get his signature drawing on a t-shirt!`,
   },
   {
     name: "Hizkia Christie",
@@ -172,7 +185,13 @@ const teams = [
     title: "SSI Dive Master",
     proid: "101467",
     ig_handle: "hizkiachristie",
-    desc: "Hizkia took his first diving training in 2017, has been everywhere and is officially a Divemaster now. He is a young professional cinematographer both above and underwater. His stories and posts on his social media are mind-blowing! Recording and editing videos are his love and life that he brought into the underwater world. He loves to share some tips and tricks too! In our team, he is our social media guru that is managing our platforms. He also spent some years as an aquarist in a fancy aquarium in Jakarta, which really boosted his knowledge about marine life, especially when it comes to ornamental fish. Though his buoyancy and diving skill are considered exemplary, he always listens and learns from others to always improve himself in diving.",
+    desc: `Hizkia took his first diving training in 2017, has been everywhere and is officially a Divemaster now.
+    He is a young professional cinematographer both above and underwater.
+    His stories and posts on his social media are mind-blowing!
+    Recording and editing videos are his love and life that he brought into the underwater world.
+    He loves to share some tips and tricks too! In our team, he is our social media guru that is managing our platforms.
+    He also spent some years as an aquarist in a fancy aquarium in Jakarta, which really boosted his knowledge about marine life, especially when it comes to ornamental fish.
+    Though his buoyancy and diving skill are considered exemplary, he always listens and learns from others to always improve himself in diving.`,
   },
   {
     name: "Frieska Pamariadinata",
@@ -180,7 +199,11 @@ const teams = [
     title: "SSI Dive Master",
     proid: "101465",
     ig_handle: "fdinata",
-    desc: "Starting her first dive training back in 2016, Frieska passionately climbed her way to dive professional with full of excitement. Despite her busy schedule working in a prominent bank in Jakarta, she is committed to diving by dedicating her time to visit beautiful places in Indonesia. She got full support from her dive gang to gain her professional rating since they see that Frieska is a natural leader with great hospitality. Diving safety has been her main concern in her journey. Hence, diving with her would feel super safe and enjoyable. WIth Frieska in the team, we look forward to accommodating more females to learn scuba diving, all the way up to the professional level, as proven by her journey.",
+    desc: `Starting her first dive training back in 2016, Frieska passionately climbed her way to dive professional with full of excitement.
+    Despite her busy schedule working in a prominent bank in Jakarta, she is committed to diving by dedicating her time to visit beautiful places in Indonesia.
+    She got full support from her dive gang to gain her professional rating since they see that Frieska is a natural leader with great hospitality.
+    Diving safety has been her main concern in her journey. Hence, diving with her would feel super safe and enjoyable.
+    With Frieska in the team, we look forward to accommodating more females to learn scuba diving, all the way up to the professional level, as proven by her journey.`,
   },
 ];
 
