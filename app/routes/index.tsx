@@ -35,12 +35,12 @@ export default function Index() {
         </div>
         <div className="slantedy bg-cyan-400" />
 
-        <div className="max-w-7xl mx-auto pt-10 pb-20 flex flex-col sm:flex-row items-center justify-evenly">
+        <div className="max-w-7xl px-4 mx-auto pt-10 pb-20 flex flex-col sm:flex-row items-center justify-evenly">
           <div>
-            <h2 className="text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
+            <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
               Ready to dive?
             </h2>
-            <h2 className="text-4xl font-extrabold tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
               Contact Us!
             </h2>
           </div>
