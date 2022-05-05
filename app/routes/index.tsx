@@ -3,7 +3,7 @@ import { Link } from "@remix-run/react";
 import { Features } from "~/components/Features";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
-import { ThemeSwitcher } from "~/components/ThemeSwitcher";
+import { WhatsAppLogo } from "~/components/logo/WhatsApp";
 
 import stylesUrl from "~/styles/index.css";
 
@@ -26,20 +26,24 @@ export default function Index() {
             </span>
             <span className="block">with us!</span>
           </h1>
-          <ThemeSwitcher />
 
-          <Link to="team">
-            <div className="inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700">
-              Get started
+          <a
+            href="https://wa.me/628115415335?text=Halo Kurabesi, saya dapat kontak ini dari https://kurabesidiveschool.com. Saya mau tahu lebih lanjut mengenai sertifikasi scuba diving."
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="mt-8 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-cyan-400 hover:bg-cyan-500">
+              <WhatsAppLogo className="w-6 mr-2" />
+              <span>Contact Us (WhatsApp)</span>
             </div>
-          </Link>
+          </a>
         </div>
 
-        <div className="slantedx bg-[#06dbd0]" />
-        <div className="py-10 bg-[#06dbd0]">
+        <div className="slantedx bg-cyan-400" />
+        <div className="py-10 bg-cyan-400">
           <Features />
         </div>
-        <div className="slantedy bg-[#06dbd0]" />
+        <div className="slantedy bg-cyan-400" />
       </main>
 
       <Footer />
