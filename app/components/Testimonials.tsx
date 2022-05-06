@@ -20,6 +20,8 @@ export const Testmonials = () => {
             ))}
         </div>
       </div>
+
+      <TripAdvisorWidgets />
     </div>
   );
 };
@@ -47,6 +49,69 @@ const Testimonial = ({
         </div>
       </div>
     </div>
+  );
+};
+
+const TripAdvisorWidgets = () => {
+  return (
+    <>
+      <div
+        id="TA_selfserveprop107"
+        className="TA_selfserveprop flex justify-center"
+      >
+        <ul id="TLoF3W9nQd" className="TA_links fD6oh1YOfz">
+          <li id="1zObYWuul8lt" className="4A0oNA">
+            <a
+              target="_blank"
+              href="https://www.tripadvisor.com/Attraction_Review-g294229-d19657904-Reviews-Kurabesi_Dive_School-Jakarta_Java.html"
+              rel="noreferrer"
+            >
+              <img
+                src="https://www.tripadvisor.com/img/cdsi/img2/branding/v2/Tripadvisor_lockup_horizontal_secondary_registered-11900-2.svg"
+                alt="TripAdvisor"
+              />
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div className="flex justify-center items-center pt-4">
+        <div id="TA_excellent499" className="TA_excellent">
+          <ul id="K1DojhclkL" className="TA_links q12YDqJw">
+            <li id="q3tRbKqL" className="CoChfxTiOmpm">
+              <a
+                target="_blank"
+                href="https://www.tripadvisor.com/Attraction_Review-g294229-d19657904-Reviews-Kurabesi_Dive_School-Jakarta_Java.html"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+                  alt="TripAdvisor"
+                  className="widEXCIMG"
+                  id="CDSWIDEXCLOGO"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div id="TA_cdswritereviewnew915" className="TA_cdswritereviewnew">
+          <ul id="Eztz7mkUJtnt" className="TA_links 40wjT0sjx">
+            <li id="HjdjTbzdB" className="FlhcXZIB6A">
+              <a
+                target="_blank"
+                href="https://www.tripadvisor.com/"
+                rel="noreferrer"
+              >
+                <img
+                  src="https://static.tacdn.com/img2/brand_refresh/Tripadvisor_lockup_horizontal_secondary_registered.svg"
+                  alt="TripAdvisor"
+                />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </>
   );
 };
 
