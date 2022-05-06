@@ -120,7 +120,7 @@ const SSI = ({ proid }: { proid: string }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <SSILogo />
+      <SSILogo className="w-6" />
     </a>
   );
 };
@@ -132,7 +132,7 @@ const Instagram = ({ handle }: { handle: string }) => {
       target="_blank"
       rel="noreferrer"
     >
-      <InstagramLogo />
+      <InstagramLogo className="w-6" />
     </a>
   );
 };

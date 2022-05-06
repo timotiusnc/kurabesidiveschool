@@ -12,38 +12,40 @@ import {
 } from "@heroicons/react/outline";
 import { Link } from "@remix-run/react";
 import { ThemeSwitcher } from "./ThemeSwitcher";
+import { InstagramLogo } from "./logo/Instagram";
+import { TiktokLogo } from "./logo/Tiktok";
 
 const moreCutOff = 3; // number of items to show before "more"
 const routes = [
   {
     name: "Team",
-    description:
-      "Get a better understanding of where your traffic is coming from.",
+    description: "Meet the people behind Kurabesi Dive School.",
     href: "/team",
     icon: UserGroupIcon,
   },
   {
     name: "Trips 2022",
-    description: "Speak directly to your customers in a more meaningful way.",
+    description: "Explore the beauty of our ocean.",
     href: "/trips",
     icon: CalendarIcon,
   },
   {
     name: "Courses",
-    description: "Your customers' data will be safe and secure.",
+    description: "Our wide range of dive courses.",
     href: "/courses",
     icon: AcademicCapIcon,
   },
   {
     name: "Insurance",
-    description: "Connect with third-party tools that you're already using.",
+    description:
+      "Dive accident coverage for scuba diving, freediving, and rebreather diving.",
     href: "/insurance",
     icon: ShieldCheckIcon,
   },
   {
     name: "MV Kurabesi Explorer",
     description:
-      "Build strategic funnels that will drive your customers to convert",
+      "Kurabesi Explorer is member of the Kurabesi Nusantara family - a social enterprise establishing best-practice in sustainable tourism.",
     href: "/kurabesi-explorer",
     icon: GlobeIcon,
   },
@@ -77,7 +79,10 @@ export function Header() {
             </Popover.Button>
           </div>
 
-          <Popover.Group as="nav" className="hidden md:flex space-x-10">
+          <Popover.Group
+            as="nav"
+            className="hidden md:flex space-x-10 items-center"
+          >
             {/* Desktop main menu without dropdown */}
             {routes
               .filter((item, idx) => idx < moreCutOff)
@@ -155,7 +160,8 @@ export function Header() {
           </Popover.Group>
 
           {/* Desktop menu far right */}
-          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
+          <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0 gap-4">
+            <KurabesiSocialLogos />
             <ThemeSwitcher />
           </div>
         </div>
@@ -175,7 +181,7 @@ export function Header() {
           focus
           className="absolute top-0 inset-x-0 p-2 transition transform origin-top-right md:hidden"
         >
-          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white ">
+          <div className="rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 bg-white divide-y-2 divide-gray-50">
             <div className="pt-5 pb-6 px-5">
               <div className="flex items-center justify-between">
                 {/* mobile popover logo */}
@@ -213,9 +219,42 @@ export function Header() {
                 </nav>
               </div>
             </div>
+            <div className="py-6 px-5 flex justify-between gap-4">
+              <div className="flex gap-4">
+                <KurabesiSocialLogos />
+              </div>
+              <ThemeSwitcher />
+            </div>
           </div>
         </Popover.Panel>
       </Transition>
     </Popover>
   );
 }
+
+const KurabesiSocialLogos = () => {
+  return (
+    <>
+      <SocialLogo url="https://instagram.com/kurabesidiveschool">
+        <InstagramLogo className="w-6" />
+      </SocialLogo>
+      <SocialLogo url="https://tiktok.com/@kurabesidiveschool">
+        <TiktokLogo className="w-6" />
+      </SocialLogo>
+    </>
+  );
+};
+
+const SocialLogo = ({
+  url,
+  children,
+}: {
+  url: string;
+  children: React.ReactNode;
+}) => {
+  return (
+    <a href={url} target="_blank" rel="noreferrer">
+      {children}
+    </a>
+  );
+};

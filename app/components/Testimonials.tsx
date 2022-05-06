@@ -1,7 +1,7 @@
 export const Testmonials = () => {
   return (
-    <div>
-      <h2 className="text-4xl md:text-5xl text-center font-bold pt-8">
+    <div className="pt-8">
+      <h2 className="text-4xl md:text-5xl text-center font-bold">
         What They Say
       </h2>
       <div className="flex flex-col sm:flex-row p-8 gap-4 justify-center">
