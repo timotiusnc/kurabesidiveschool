@@ -3,8 +3,10 @@ import { Features } from "~/components/Features";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { WhatsAppLogo } from "~/components/logo/WhatsApp";
+import { Testmonials } from "~/components/Testimonials";
 
 import stylesUrl from "~/styles/index.css";
+import { generateWALink } from "~/utils/contact";
 
 export const links: LinksFunction = () => {
   return [{ rel: "stylesheet", href: stylesUrl }];
@@ -35,6 +37,8 @@ export default function Index() {
         </div>
         <div className="slantedy bg-cyan-400" />
 
+        <Testmonials />
+
         <div className="max-w-7xl px-4 mx-auto pt-10 pb-20 flex flex-col sm:flex-row items-center justify-evenly">
           <div>
             <h2 className="text-4xl sm:text-5xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-400">
@@ -56,7 +60,7 @@ export default function Index() {
 const ContactUs = () => {
   return (
     <a
-      href="https://wa.me/628115415335?text=Halo Kurabesi, saya dapat kontak ini dari https://kurabesidiveschool.com. Saya mau tahu lebih lanjut mengenai sertifikasi scuba diving."
+      href={generateWALink({ phone: "628115415335" })}
       target="_blank"
       rel="noreferrer"
     >

@@ -1,3 +1,5 @@
+import { generateWALink } from "~/utils/contact";
+
 export const Footer = () => {
   return (
     <footer className="flex p-10 flex-col gap-8 md:flex-row bg-gray-300">
@@ -59,7 +61,7 @@ const WA = ({ phone }: { phone: string }) => {
   return (
     <a
       className="underline"
-      href={`https://wa.me/${phone}`}
+      href={generateWALink({ phone })}
       target="_blank"
       rel="noreferrer"
     >
