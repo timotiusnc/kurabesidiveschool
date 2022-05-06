@@ -57,7 +57,7 @@ const TripAdvisorWidgets = () => {
     <>
       <div
         id="TA_selfserveprop107"
-        className="TA_selfserveprop flex justify-center"
+        className="TA_selfserveprop flex justify-center px-4"
       >
         <ul id="TLoF3W9nQd" className="TA_links fD6oh1YOfz">
           <li id="1zObYWuul8lt" className="4A0oNA">
@@ -75,7 +75,7 @@ const TripAdvisorWidgets = () => {
         </ul>
       </div>
 
-      <div className="flex justify-center items-center pt-4">
+      <div className="flex flex-col sm:flex-row justify-center items-center pt-4 px-4">
         <div id="TA_excellent499" className="TA_excellent">
           <ul id="K1DojhclkL" className="TA_links q12YDqJw">
             <li id="q3tRbKqL" className="CoChfxTiOmpm">
