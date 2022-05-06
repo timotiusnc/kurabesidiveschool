@@ -1,4 +1,24 @@
+import { useEffect } from "react";
+
 export const Testmonials = () => {
+  // This hack is inspired from https://stackoverflow.com/a/50098275/1461624
+  // It's for TripAdvisor widgets:
+  // 1. Open page containing widget, it will show up after a while
+  // 2. Navigate to other page, then back to previous page that contains widget
+  // 3. Expectation: widget still show up; Reality: widget is gone
+  useEffect(() => {
+    Object.keys(window).forEach((key) => {
+      if (
+        key.match(/^injectcdswritereviewnew[0-9]+$/) ||
+        key.match(/^injectselfserveprop[0-9]+$/) ||
+        key.match(/^injectexcellent[0-9]+$/)
+      ) {
+        // @ts-ignore
+        window[key]();
+      }
+    });
+  }, []);
+
   return (
     <div className="pt-8">
       <h2 className="text-4xl md:text-5xl text-center font-bold">
@@ -59,7 +79,7 @@ const TripAdvisorWidgets = () => {
         id="TA_selfserveprop107"
         className="TA_selfserveprop flex justify-center px-4"
       >
-        <ul id="TLoF3W9nQd" className="TA_links fD6oh1YOfz">
+        <ul id="TLoF3W9nQd" className="TA_links fD6oh1YOfz hidden">
           <li id="1zObYWuul8lt" className="4A0oNA">
             <a
               target="_blank"
@@ -75,9 +95,9 @@ const TripAdvisorWidgets = () => {
         </ul>
       </div>
 
-      <div className="flex flex-col sm:flex-row justify-center items-center pt-4 px-4">
+      <div className="flex flex-col sm:flex-row justify-center items-center pt-4 px-4 gap-4">
         <div id="TA_excellent499" className="TA_excellent">
-          <ul id="K1DojhclkL" className="TA_links q12YDqJw">
+          <ul id="K1DojhclkL" className="TA_links q12YDqJw hidden">
             <li id="q3tRbKqL" className="CoChfxTiOmpm">
               <a
                 target="_blank"
@@ -95,7 +115,7 @@ const TripAdvisorWidgets = () => {
           </ul>
         </div>
         <div id="TA_cdswritereviewnew915" className="TA_cdswritereviewnew">
-          <ul id="Eztz7mkUJtnt" className="TA_links 40wjT0sjx">
+          <ul id="Eztz7mkUJtnt" className="TA_links 40wjT0sjx hidden">
             <li id="HjdjTbzdB" className="FlhcXZIB6A">
               <a
                 target="_blank"
