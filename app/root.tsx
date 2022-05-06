@@ -15,7 +15,7 @@ export const links: LinksFunction = () => {
 };
 
 export const meta: MetaFunction = () => {
-  const title = "Dive Courses — Kurabesi Dive School";
+  const title = "Your most trusted buddy in diving — Kurabesi Dive School";
   const description =
     "Thinking to get yourself SCUBA Dive certified in a safe and joyful way? Kurabesi Dive School offers various SCUBA dive programs to facilitate you to grow in your diving path. Find out our team, courses, programs, and diving trips on our website.";
   const image = "https://kurabesidiveschool.vercel.app/images/social.jpg";
