@@ -50,21 +50,6 @@ export default function App() {
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <script
-          async
-          src="https://www.jscache.com/wejs?wtype=excellent&amp;uniq=499&amp;locationId=19657904&amp;lang=en_US&amp;display_version=2"
-          data-loadtrk
-        />
-        <script
-          async
-          src="https://www.jscache.com/wejs?wtype=cdswritereviewnew&amp;uniq=915&amp;locationId=19657904&amp;lang=en_US&amp;lang=en_US&amp;display_version=2"
-          data-loadtrk
-        />
-        <script
-          async
-          src="https://www.jscache.com/wejs?wtype=selfserveprop&amp;uniq=107&amp;locationId=19657904&amp;lang=en_US&amp;rating=true&amp;nreviews=4&amp;writereviewlink=true&amp;popIdx=true&amp;iswide=true&amp;border=true&amp;display_version=2"
-          data-loadtrk
-        />
       </body>
     </html>
   );
