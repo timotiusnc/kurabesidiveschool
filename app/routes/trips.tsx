@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
@@ -35,15 +36,17 @@ const Trips = () => {
                 key={trip.name}
                 className="w-full overflow-hidden flex flex-col justify-center"
               >
-                <div className="drop-shadow-md mx-auto">
+                <Link to={`#${trip.id}`} className="drop-shadow-md mx-auto">
                   <img
                     className="rounded-lg object-center object-contain h-60"
                     src={trip.imgUrl}
                     alt={trip.name}
                   />
-                </div>
+                </Link>
                 <div className="pt-4 flex flex-col items-center">
-                  <div className="text-2xl font-bold mb-1">{trip.name}</div>
+                  <Link to={`#${trip.id}`} className="text-2xl font-bold mb-1">
+                    {trip.name}
+                  </Link>
                   <div
                     className="text-base text-indigo-600 mb-1 text-center sm:line-clamp-1"
                     title={trip.province}
@@ -59,6 +62,7 @@ const Trips = () => {
         <div>
           {trips.map((trip, id) => (
             <section
+              id={trip.id}
               key={trip.name}
               className={`flex flex-wrap gap-4 md:gap-8 p-8 justify-center items-start ${
                 id % 2 === 0 ? "bg-gray-200" : ""
@@ -87,6 +91,7 @@ const Trips = () => {
                   .map((sentence, idx) => (
                     <p key={idx}>{sentence}</p>
                   ))}
+                <Link to=".">Back to top</Link>
               </div>
             </section>
           ))}
@@ -100,6 +105,7 @@ const Trips = () => {
 
 const trips = [
   {
+    id: "alor",
     name: "Alor",
     province: "NTT",
     imgUrl: "/images/trips/alor.webp",
@@ -110,6 +116,7 @@ const trips = [
     Hoping to see them underwater? Let’s try our luck!`,
   },
   {
+    id: "komodo",
     name: "Komodo",
     province: "NTT",
     imgUrl: "/images/trips/komodo.webp",
@@ -121,6 +128,7 @@ const trips = [
     The trip to Komodo is always a beautiful combo of memorable underwater experiences and island trekking to learn more about the dragon.`,
   },
   {
+    id: "tulamben-and-amed",
     name: "Tulamben & Amed",
     province: "Bali",
     imgUrl: "/images/trips/tulamben.webp",
@@ -133,6 +141,7 @@ const trips = [
     We believe that you would be blown away by the natural beauty of these places.`,
   },
   {
+    id: "raja-ampat",
     name: "Raja Ampat",
     province: "West Papua",
     imgUrl: "/images/trips/rajaampat.webp",
@@ -144,6 +153,7 @@ const trips = [
     We believe that you would be blown away by the natural beauty of this place.`,
   },
   {
+    id: "banda-neira",
     name: "Banda Neira",
     province: "Maluku",
     imgUrl: "/images/trips/banda.webp",
@@ -155,6 +165,7 @@ const trips = [
     We believe that you would be blown away by the natural beauty of this place.`,
   },
   {
+    id: "seribu-island",
     name: "Seribu Island",
     province: "DKI Jakarta",
     imgUrl: "/images/trips/seribu.webp",

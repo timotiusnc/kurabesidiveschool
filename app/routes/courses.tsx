@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 
@@ -71,20 +72,21 @@ const CoursePreview = ({
             key={course.name}
             className="w-full overflow-hidden flex flex-col justify-center"
           >
-            <div className="drop-shadow-md mx-auto">
+            <Link to={`#${course.id}`} className="drop-shadow-md mx-auto">
               <img
                 className="rounded-lg object-center object-contain h-44"
                 src={course.imgUrl}
                 alt={course.name}
               />
-            </div>
+            </Link>
             <div className="pt-4 flex flex-col items-center">
-              <div
+              <Link
+                to={`#${course.id}`}
                 className="text-2xl font-bold mb-1 text-center sm:line-clamp-1"
                 title={course.name}
               >
                 {course.name}
-              </div>
+              </Link>
             </div>
           </div>
         ))}
@@ -98,6 +100,7 @@ const CourseDetail = ({ courses }: { courses: typeof courseList }) => {
     <div>
       {courses.map((course, id) => (
         <section
+          id={course.id}
           key={course.name}
           className={`flex flex-wrap gap-4 md:gap-8 p-8 justify-center items-start ${
             id % 2 === 0 ? "bg-gray-200" : ""
@@ -128,6 +131,7 @@ const CourseDetail = ({ courses }: { courses: typeof courseList }) => {
               .map((sentence, idx) => (
                 <p key={idx}>{sentence}</p>
               ))}
+            <Link to=".">Back to top</Link>
           </div>
         </section>
       ))}
@@ -150,6 +154,7 @@ export default Courses;
 
 const courseList = [
   {
+    id: "try-scuba",
     name: "Try Scuba",
     imgUrl: "/images/courses/beginner/tryscuba.webp",
     level: "beginner",
@@ -158,6 +163,7 @@ const courseList = [
     Start today!`,
   },
   {
+    id: "open-water-diver",
     name: "Open Water Diver",
     imgUrl: "/images/courses/beginner/owd.webp",
     level: "beginner",
@@ -167,6 +173,7 @@ const courseList = [
     Join the SSI Open Water Diver program now!`,
   },
   {
+    id: "scuba-skill-update",
     name: "Scuba Skill Update",
     imgUrl: "/images/courses/beginner/skillupdate.webp",
     level: "beginner",
@@ -176,6 +183,7 @@ const courseList = [
     Start diving again now!`,
   },
   {
+    id: "advanced-adventurer",
     name: "Advanced Adventurer",
     imgUrl: "/images/courses/specialty/aa.webp",
     level: "specialty",
@@ -184,6 +192,7 @@ const courseList = [
     This is the best way to continue your education to become a confident, safe and comfortable advanced diver.`,
   },
   {
+    id: "perfect-buoyancy",
     name: "Perfect Buoyancy",
     imgUrl: "/images/courses/specialty/pb.webp",
     level: "specialty",
@@ -192,6 +201,7 @@ const courseList = [
     Start this essential specialty course now!`,
   },
   {
+    id: "deep-diving",
     name: "Deep Diving",
     imgUrl: "/images/courses/specialty/deep.webp",
     level: "specialty",
@@ -200,6 +210,7 @@ const courseList = [
     You will learn how to plan and conduct dives to between 18 and 40 meters deep and earn your SSI Deep Diving Specialty certification.`,
   },
   {
+    id: "night-limited-visibility",
     name: "Night & Limited Visibility",
     imgUrl: "/images/courses/specialty/night.webp",
     level: "specialty",
@@ -209,6 +220,7 @@ const courseList = [
     Upon completion, you will earn your SSI Night Diving and Limited Visibility specialty certification.`,
   },
   {
+    id: "science-diving",
     name: "Science of Diving",
     imgUrl: "/images/courses/specialty/sod.webp",
     level: "specialty",
@@ -217,12 +229,14 @@ const courseList = [
     Start online today!`,
   },
   {
+    id: "diver-stress-rescue",
     name: "Diver Stress & Rescue",
     imgUrl: "/images/courses/specialty/rescue.webp",
     level: "specialty",
     desc: `Diver stress is a major cause of diving accidents, but it can easily be prevented and resolved. Join the SSI Diver Stress and Rescue Specialty program and learn how to help yourself and other divers stay safe.Earn this essential specialty certification today!`,
   },
   {
+    id: "react-right",
     name: "React Right",
     imgUrl: "/images/courses/specialty/rr.webp",
     level: "specialty",
@@ -231,20 +245,23 @@ const courseList = [
     Earn the SSI React Right specialty certification and help other divers in need.`,
   },
   {
+    id: "recreational-sidemount",
     name: "Recreational Sidemount",
     imgUrl: "/images/courses/specialty/sidemount.webp",
     level: "specialty",
     desc: `Are you ready for better streamlining in the water?
-    Take the weight off your back by joining SSI’s Recreational Sidemount program.
+    Take the weight off your back by joining SSI Recreational Sidemount program.
     This course will teach you the proper sidemount setup and techniques required to use a sidemount configuration efficiently and effectively with multiple stage cylinders.`,
   },
   {
+    id: "enriched-air-nitrox",
     name: "Enriched Air Nitrox Level 2 (40%)",
     imgUrl: "/images/courses/specialty/ean.webp",
     level: "specialty",
     desc: `Do you want to extend your dive time and explore the dive sites you love for longer? Join the SSI Enriched Air Nitrox specialty program and become a Nitrox diver! This is the perfect course to get the most out of your dive time, especially on multi-dive days, and helps minimize diver fatigue. Earn your SSI Enriched Air Nitrox Specialty certification now!`,
   },
   {
+    id: "decompression-diving",
     name: "Decompression Diving",
     imgUrl: "/images/courses/specialty/deco.webp",
     level: "specialty",
@@ -254,6 +271,7 @@ const courseList = [
     To earn your SSI Decompression Diving Specialty, you will learn how to plan and conduct a limited decompression dive using dive planning software and a multi-gas computer to a maximum depth of 40 meters.`,
   },
   {
+    id: "cavern-diving",
     name: "Cavern Diving",
     imgUrl: "/images/courses/specialty/cavern.webp",
     level: "specialty",
@@ -263,6 +281,7 @@ const courseList = [
     Start your Cavern Diving course today!`,
   },
   {
+    id: "extended-range-foundations",
     name: "Extended Range Foundations",
     imgUrl: "/images/courses/specialty/xr.webp",
     level: "specialty",
@@ -271,6 +290,7 @@ const courseList = [
     Dive into the exciting world of technical diving with Extended Range Foundations. Get started online today!`,
   },
   {
+    id: "marine-ecology",
     name: "Marine Ecology",
     imgUrl: "/images/courses/specialty/marine.webp",
     level: "specialty",
@@ -281,6 +301,7 @@ const courseList = [
     Enhance your dives - earn the SSI Marine Ecology specialty certification now!`,
   },
   {
+    id: "dive-guide",
     name: "Dive Guide",
     imgUrl: "/images/courses/pro/guide.webp",
     level: "pro",
@@ -290,12 +311,14 @@ const courseList = [
     Take the first exciting step towards earning your Divemaster rating now.`,
   },
   {
+    id: "dive-master",
     name: "Dive Master",
     imgUrl: "/images/courses/pro/dm.webp",
     level: "pro",
     desc: `Earn this recognition rating by taking your Dive Guide program and Science of Diving specialty that will equip you as a qualified Divemaster!`,
   },
   {
+    id: "assistant-instructor",
     name: "Assistant Instructor",
     imgUrl: "/images/courses/pro/ai.webp",
     level: "pro",

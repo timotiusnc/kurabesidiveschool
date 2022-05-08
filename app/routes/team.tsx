@@ -1,4 +1,5 @@
 import type { MetaFunction } from "@remix-run/node";
+import { Link } from "@remix-run/react";
 import { Footer } from "~/components/Footer";
 import { Header } from "~/components/Header";
 import { InstagramLogo } from "~/components/logo/Instagram";
@@ -34,15 +35,23 @@ const Team = () => {
                 key={team.proid}
                 className="w-full overflow-hidden flex flex-col justify-center"
               >
-                <div className="drop-shadow-md mx-auto">
+                <Link
+                  to={`#${team.ig_handle}`}
+                  className="drop-shadow-md mx-auto"
+                >
                   <img
                     className="rounded-lg object-center object-contain h-60"
                     src={team.imgUrl}
                     alt={team.name}
                   />
-                </div>
+                </Link>
                 <div className="pt-4 flex flex-col items-center">
-                  <div className="text-2xl font-bold mb-1">{team.name}</div>
+                  <Link
+                    to={`#${team.ig_handle}`}
+                    className="text-2xl font-bold mb-1"
+                  >
+                    {team.name}
+                  </Link>
                   <div
                     className="text-base text-indigo-600 mb-1 text-center sm:line-clamp-1"
                     title={team.title}
@@ -63,6 +72,7 @@ const Team = () => {
         <div>
           {teams.map((team, id) => (
             <section
+              id={team.ig_handle}
               key={team.proid}
               className={`flex flex-wrap gap-4 md:gap-8 p-8 justify-center items-start ${
                 id % 2 === 0 ? "bg-gray-200" : ""
@@ -101,6 +111,7 @@ const Team = () => {
                   .map((sentence, idx) => (
                     <p key={idx}>{sentence}</p>
                   ))}
+                <Link to=".">Back to top</Link>
               </div>
             </section>
           ))}

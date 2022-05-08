@@ -25,7 +25,10 @@ export function CatchBoundary() {
       <LayeredWave className="absolute" />
       <div className="relative h-full grid place-content-center">
         <div className="w-3/4 sm:w-1/2 mx-auto">
-          <img src="images/kurabesi_wide.webp" alt="Kurabesi Dive School" />
+          <img
+            src="/images/kurabesi_wide.webp"
+            alt="Kurabesi Dive School logo"
+          />
         </div>
         <h1 className="text-2xl sm:text-3xl text-center mt-4 font-extrabold tracking-tight">
           40.4 meters — Too Deep

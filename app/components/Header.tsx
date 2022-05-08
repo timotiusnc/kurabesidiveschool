@@ -66,8 +66,8 @@ export function Header() {
               <span className="sr-only">Home</span>
               <img
                 className="h-10 sm:h-12 w-auto"
-                src="images/kurabesi_wide.webp"
-                alt=""
+                src="/images/kurabesi_wide.webp"
+                alt="Kurabesi Logo"
               />
             </Link>
           </div>
@@ -188,7 +188,7 @@ export function Header() {
                 <Link to="/">
                   <img
                     className="h-10 w-auto"
-                    src="images/kurabesi_wide.webp"
+                    src="/images/kurabesi_wide.webp"
                     alt="Home"
                   />
                 </Link>

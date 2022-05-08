@@ -5,18 +5,18 @@ export const Footer = () => {
     <footer className="flex p-10 flex-col gap-8 md:flex-row bg-gray-300">
       <div className="flex-1 flex gap-4 flex-col items-center md:items-end">
         <div className="w-64">
-          <img alt="official partner SSI" src="images/blueocean.png" />
+          <img alt="official partner SSI" src="/images/blueocean.png" />
         </div>
         <div className="flex justify-center md:justify-end gap-4">
           <img
             className="w-24"
             alt="official partner SSI"
-            src="images/ssi_divecenter.webp"
+            src="/images/ssi_divecenter.webp"
           />
           <img
             className="w-24"
             alt="official partner SSI"
-            src="images/ssi_diveschool.webp"
+            src="/images/ssi_diveschool.webp"
           />
         </div>
       </div>

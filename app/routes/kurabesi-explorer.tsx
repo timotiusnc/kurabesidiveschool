@@ -29,7 +29,7 @@ export default function KurabesiExplorer() {
         <div className="w-full px-6 py-12 bg-white shadow-xl shadow-slate-700/10 ring-1 ring-gray-900/5 md:max-w-3xl md:mx-auto lg:max-w-4xl lg:pt-16 lg:pb-28">
           <div className="prose prose-slate mx-auto lg:prose-lg">
             <img
-              src="images/kurabesiexplorer/far.webp"
+              src="/images/kurabesiexplorer/far.webp"
               alt="MV Kurabesi Explorer from far away"
             />
             <p className="lead">
@@ -58,7 +58,7 @@ export default function KurabesiExplorer() {
 
             <hr />
             <img
-              src="images/kurabesiexplorer/close.webp"
+              src="/images/kurabesiexplorer/close.webp"
               alt="MV Kurabesi Explorer up close"
               width="256"
               height="256"
@@ -79,7 +79,7 @@ export default function KurabesiExplorer() {
 
             <hr />
             <img
-              src="images/kurabesiexplorer/features.webp"
+              src="/images/kurabesiexplorer/features.webp"
               alt="Dining hall at MV Kurabesi Explorer"
             />
             <h2>Features</h2>
@@ -93,7 +93,7 @@ export default function KurabesiExplorer() {
 
             <hr />
             <img
-              src="images/kurabesiexplorer/home.webp"
+              src="/images/kurabesiexplorer/home.webp"
               alt="Cabin at MV Kurabesi Explorer"
             />
             <h2>Home At Sea</h2>
@@ -112,7 +112,7 @@ export default function KurabesiExplorer() {
 
             <hr />
             <img
-              src="images/kurabesiexplorer/sports.webp"
+              src="/images/kurabesiexplorer/sports.webp"
               alt="Guests kayaking in Raja Ampat"
             />
             <h2>Sports & Entertainment</h2>
@@ -132,7 +132,7 @@ export default function KurabesiExplorer() {
 
             <hr />
             <img
-              src="images/kurabesiexplorer/divestation.webp"
+              src="/images/kurabesiexplorer/divestation.webp"
               alt="Dive stations aboard MV Kurabesi Explorer"
             />
             <h2>Dive Station</h2>
