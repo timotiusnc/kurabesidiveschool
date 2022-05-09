@@ -42,6 +42,11 @@ export default function App() {
     <html lang="en" className="h-full">
       <head>
         <Meta />
+        <script
+          defer
+          data-domain="kurabesidiveschool.vercel.app"
+          src="https://plausible.io/js/plausible.js"
+        ></script>
         <Links />
       </head>
       <body className="h-full">
