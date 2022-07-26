@@ -64,7 +64,7 @@ const ContactUs = () => {
       target="_blank"
       rel="noreferrer"
     >
-      <div className="mt-8 inline-flex justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-cyan-400 hover:bg-cyan-500">
+      <div className="mt-8 inline-flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md bg-cyan-400 hover:bg-cyan-500">
         <WhatsAppLogo className="w-6 mr-2" />
         <span>Contact Us (WhatsApp)</span>
       </div>
